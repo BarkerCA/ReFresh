@@ -1,21 +1,3 @@
-/*
-  Theme Name: Pointe North Parallax
-  Theme URI: http://www.pointenorth.org
-  Description: A mobile responsive and HTML5 theme based on StudioPress' Parallax Pro made for the Genesis Framework
-  Author: Pointe North Church
-  Author URI: http://www.pointenorth.org
-
-  Version: 1.0
-
-  Tags: black, white, blue, green, orange, pink, one-column, two-columns, responsive-layout, custom-header, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, premise-landing-page
-
-  Template: genesis
-  Template Version: 2.1
-
-  License: GPL-2.0+
-  License URI: http://www.opensource.org/licenses/gpl-license.php 
-*/
-
 // Variables
 @import "lib/variables";
 @import "lib/prelib-functions";
@@ -43,9 +25,4 @@
 @import "lib/classes";
 
 // Application Styles
-@import "parallax-pnc";
-@import "pnc/tags";
-@import "pnc/overrides";
-@import "pnc/parallax-photo";
-@import "pnc/widgetized_footer";
-@import "pnc/series";
+@import "refresh/layout";

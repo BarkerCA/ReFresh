@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @apppointment.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @apppointment.date %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @apppointment.location %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @apppointment.memo %>
+</p>
+
+<%= link_to 'Edit', edit_apppointment_path(@apppointment) %> |
+<%= link_to 'Back', apppointments_path %>
