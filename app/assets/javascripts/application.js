@@ -15,4 +15,3 @@
 //= require turbolinks
 //= require fastclick
 //= require foundation
-//= require init

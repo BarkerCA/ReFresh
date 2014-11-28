@@ -1,0 +1,26 @@
+$rf_green: #3AB54A;
+$rf_gray: #595758;
+
+.button{
+  background: $rf_green;
+}
+
+.button:hover{
+  background: darken($rf_green, 10%);
+}
+
+.topnav{
+  margin-top: 12px;
+}
+
+h1 a:hover{
+  background: none;
+}
+
+.example-orbit li{
+  list-style: none;
+  
+  img{
+    display: none;
+  }
+}
