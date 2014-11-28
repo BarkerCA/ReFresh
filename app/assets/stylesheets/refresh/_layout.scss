@@ -1,20 +1,59 @@
-$rf_green: #3AB54A;
-$rf_gray: #595758;
-
-.button{
-  background: $rf_green;
+body{
+  background: $rf-gray;
+  color: white;
+  
+  h1.slogan{
+    @extend .text-center;
+    color: $whiteSmoke;
+    font-size: 1.75em;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.7);
+    
+    $slogan-border-opacity: 0.7;
+    $slogan-border-style: solid;
+    $slogan-border-width: 1px;
+    $slogan-margin: 15px;
+    $slogan-padding: 15px;
+    border-bottom: $slogan-border-width $slogan-border-style rgba(255,255,255,$slogan-border-opacity);
+    padding-bottom: $slogan-padding;
+    margin-bottom: $slogan-margin;
+    border-top: $slogan-border-width $slogan-border-style rgba(255,255,255,$slogan-border-opacity);
+    padding-top: $slogan-padding;
+    margin-top: $slogan-margin;
+  }
+  
+  h1,h2,h3,h4,h5,h6{
+    color: $rf-green;
+  }
+  
+  a, a:hover, a:active{
+    color: $rf-green;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
 }
 
-.button:hover{
-  background: darken($rf_green, 10%);
+topnav .button{
+
+}
+
+.button{
+  background: $rf-green;
+  color: $white;
+}
+
+.button, .button:hover, .button:active, button:visited{
+  color: $white;
+}
+
+.button:hover, .button:active{
+  background: darken($rf-green, 10%);
+  text-decoration: none;
 }
 
 .topnav{
-  margin-top: 12px;
-}
-
-h1 a:hover{
-  background: none;
+  margin-top: 20px;
 }
 
 .example-orbit li{
