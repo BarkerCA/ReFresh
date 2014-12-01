@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
+    
   resources :schedules
   resources :apppointments
 
   root 'home#index'
   
+  get "schedule/calendar" => 'schedules#calendar'
   get "about" => 'about#index'
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -4,4 +4,8 @@ class SchedulesController < ApplicationController
     
   end
   
+  def calendar
+    
+  end
+  
 end
