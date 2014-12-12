@@ -8,35 +8,35 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'vendor/modernizr' %>
     <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   </head>
   <body class='<%= controller.controller_name %>'>
-    <div class='row'>
-      <div class='large-3 columns'>
-        <h1>
-          <a href='/'>
-            <img src='http://assets.refresh-ministries.org/images/main/ReFresh_Logo.png'>
-          </a>
-        </h1>
-      </div>
-      <div class='large-9 columns topnav'>
-        <ul class='right button-group radius'>
-          <li>
-            <a class='button' href='/'>ReFresh!</a>
-          </li>
-          <li>
-            <a class='button' href='/leadership'>Leadership</a>
-          </li>
-          <li>
-            <a class='button' href='/schedule'>Schedule</a>
-          </li>
-          <li>
-            <a class='button' href='/about'>About</a>
-          </li>
-        </ul>
-      </div>
-      <div class='large-12 columns'>
-        <h1 class="slogan">
-          "Healthy pastors lead healthy families, which produce healthy churches."
-        </h1>
+    <div class="header-nav">
+      <div class='row'>
+        <div class='large-3 columns'>
+          <h1>
+            <a href='/'>
+              <img src='/assets/ReFresh_Logo_transparent.png'>
+            </a>
+          </h1>
+        </div>
+        <div class='large-9 columns topnav'>
+          <ul class='right button-group radius'>
+            <li>
+              <a class='button' href='#refresh'>ReFresh!</a>
+            </li>
+            <li>
+              <a class='button' href='#leadership'>Leadership</a>
+            </li>
+            <li>
+              <a id="nav_contact" class='button' href='#contact'>Contact</a>
+            </li>
+            <li>
+              <a id="nav_about" class='button' href='#about'>About</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>

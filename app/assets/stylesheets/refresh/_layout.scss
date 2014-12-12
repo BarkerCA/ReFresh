@@ -1,24 +1,19 @@
+.full-background{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
 body{
-  background: $rf-gray;
+  @extend .full-background;
+  background-position: 0px 0px;
+  background-image: url('/assets/waterfall.jpg');
   color: white;
   
-  h1.slogan{
-    @extend .text-center;
-    color: $whiteSmoke;
-    font-size: 1.75em;
-    text-shadow: 1px 1px 0px rgba(0,0,0,0.7);
-    
-    $slogan-border-opacity: 0.7;
-    $slogan-border-style: solid;
-    $slogan-border-width: 1px;
-    $slogan-margin: 15px;
-    $slogan-padding: 15px;
-    border-bottom: $slogan-border-width $slogan-border-style rgba(255,255,255,$slogan-border-opacity);
-    padding-bottom: $slogan-padding;
-    margin-bottom: $slogan-margin;
-    border-top: $slogan-border-width $slogan-border-style rgba(255,255,255,$slogan-border-opacity);
-    padding-top: $slogan-padding;
-    margin-top: $slogan-margin;
+  h1,h2,h3,h4,h5,h6{
+    //font-family: 'Dancing Script', cursive;
+    //font-family: 'Cinzel', serif;
   }
   
   h1,h2,h3,h4,h5,h6{
@@ -32,24 +27,6 @@ body{
   a:hover{
     text-decoration: underline;
   }
-}
-
-topnav .button{
-
-}
-
-.button{
-  background: $rf-green;
-  color: $white;
-}
-
-.button, .button:hover, .button:active, button:visited{
-  color: $white;
-}
-
-.button:hover, .button:active{
-  background: darken($rf-green, 10%);
-  text-decoration: none;
 }
 
 .topnav{
@@ -154,5 +131,74 @@ displaying for small
   .event {
     width: 100%;
     display: block;
+  }
+}
+
+// Front page styling
+.base_front_page_section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.header-nav{
+  background: $rf-gray;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  // position: fixed;
+  // width: 100%;
+  // z-index: 1500;
+  // height: 90px;
+}
+
+.footer-nav{
+  padding-top: 25px;
+  padding-bottom: 10px;
+  background: $rf-gray;
+}
+
+.home-top{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+  #orbital{
+    h1{
+      font-variant: small-caps;
+      text-shadow: 3px 3px 5px rgba(0,0,0,0.9);
+      @extend .text-center;
+      color: $white;
+    }
+  }
+  
+}
+
+.tripanels{
+  @extend .base_front_page_section;
+  background: rgba($rf-gray,0.85);
+  
+  img{
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    border: 1px solid $rf-gray;
+  }
+}
+
+.contact{
+  @extend .base_front_page_section;
+  background: rgba(255,255,255,0.85);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#contact-modal{
+  color: $rf-gray;
+}
+
+.about{
+  @extend .base_front_page_section;
+  background: rgba($rf-green, 0.85);
+  color: $white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  h2{
+    font-family: 'Lobster', cursive;
+    @extend .text-center;
+    color: $white;
   }
 }

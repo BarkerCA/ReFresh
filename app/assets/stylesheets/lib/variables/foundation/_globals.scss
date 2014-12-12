@@ -51,6 +51,7 @@ $opposite-direction: right;
 $default-float: left;
 
 // We use these as default colors throughout
+// IMPORTANT: These colors are overridden in overrides/_alerts.css.scss
 $primary-color: #008CBA;
 $secondary-color: #e7e7e7;
 $alert-color: #f04124;
