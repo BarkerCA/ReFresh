@@ -12,8 +12,7 @@ body{
   color: white;
   
   h1,h2,h3,h4,h5,h6{
-    //font-family: 'Dancing Script', cursive;
-    //font-family: 'Cinzel', serif;
+
   }
   
   h1,h2,h3,h4,h5,h6{
@@ -161,6 +160,7 @@ displaying for small
   
   #orbital{
     h1{
+      font-family: source-sans-pro, sans-serif;
       font-variant: small-caps;
       text-shadow: 3px 3px 5px rgba(0,0,0,0.9);
       @extend .text-center;
@@ -197,7 +197,7 @@ displaying for small
   color: $white;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   h2{
-    font-family: 'Lobster', cursive;
+    font-family: kaushan-script, cursive;
     @extend .text-center;
     color: $white;
   }

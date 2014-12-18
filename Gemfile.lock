@@ -134,7 +134,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   coffee-rails (~> 4.0.0)
   compass-rails
-  foundation-rails
+  foundation-rails (= 5.4.5.0)
   haml
   jbuilder (~> 2.0)
   jquery-rails
