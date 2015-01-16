@@ -116,4 +116,14 @@ body{
   padding-top: 50px;
   padding-bottom: 50px;
   color: $rf-gray;
+  
+  #big_top_image{
+    margin-top: -50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url('/assets/GoldenGate_crop.jpg');
+    width: 100%;
+    height: 300px;
+  }
 }
