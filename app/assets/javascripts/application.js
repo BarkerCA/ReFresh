@@ -16,3 +16,4 @@
 //= require fastclick
 //= require foundation
 //= require scroll
+//= require reftagger.js

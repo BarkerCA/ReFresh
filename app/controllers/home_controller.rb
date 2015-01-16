@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @page = {:title => 'Welcome Home', :head_title => 'Home'}
+    @page = {:title => 'Welcome to ReFresh Ministries', :head_title => 'Welcome'}
   end
 end

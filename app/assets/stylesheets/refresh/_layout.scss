@@ -87,7 +87,7 @@ body{
   }
 }
 
-.contact{
+#contact_panel{
   @extend .base_front_page_section;
   background: rgba(255,255,255,0.85);
   padding-top: 50px;
@@ -98,7 +98,7 @@ body{
   color: $rf-gray;
 }
 
-.about{
+#about_panel{
   @extend .base_front_page_section;
   background: rgba($rf-green, 0.85);
   color: $white;
@@ -108,4 +108,12 @@ body{
     @extend .text-center;
     color: $white;
   }
+}
+
+// Main Content Area
+#main{
+  background: rgba(255,255,255,0.85);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: $rf-gray;
 }

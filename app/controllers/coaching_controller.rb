@@ -1,5 +1,5 @@
 class CoachingController < ApplicationController
   def index
-    @page = {:title => 'Coaching', :head_title => 'Coaching'}
+    @page = {:title => 'ReFresh Ministries Coaching', :head_title => 'ReFresh Coaching'}
   end
 end
