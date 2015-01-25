@@ -77,6 +77,30 @@ body{
   
 }
 
+#endorsement_panel{
+  @extend .base_front_page_section;
+  background: rgba(255,255,255,0.85);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: $rf-gray;
+  
+  #endorsement:before{
+    font-family: source-sans-pro, sans-serif;
+    content: '"';
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #endorsement:after{
+    font-family: source-sans-pro, sans-serif;
+    content: '"';
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .tripanels{
   @extend .base_front_page_section;
   background: rgba($rf-gray,0.85);
