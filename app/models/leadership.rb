@@ -17,7 +17,7 @@ class Leadership
       file_array << erbfile
     end
     
-    file_array.reverse.each do |efile|
+    file_array.reverse!.each do |efile|
       nfile = File.open(efile, "rb")
       file << nfile.read
     end
