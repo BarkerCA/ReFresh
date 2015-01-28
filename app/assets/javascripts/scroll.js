@@ -1,8 +1,4 @@
 $(document).ready(function (){
-  var body = $('body').height();
-  var bodyminus = body - 174;
-  $('#main').css({'min-height' : bodyminus});  
-
   $("#nav_top").click(function (){
     $('html, body').animate({
         scrollTop: $(".topofpage").offset().top

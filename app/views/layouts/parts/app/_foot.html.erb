@@ -16,7 +16,7 @@
                   <a href='/coaching'>Coaching</a>
                 </li>
                 <li>
-                  <a href='/barnabas'>Barnabas</a>
+                  <a href='/barnabas'>Barnabas Experience</a>
                 </li>
                 <li>
                   <a href='/contact'>Contact</a>
@@ -33,6 +33,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script type="text/javascript">
       $(document).foundation();
+      $(document).ready(function(){
+        var body = $('body').height();
+        var bodyminus = body - 174;
+        $('#main').css({'min-height' : bodyminus});
+      });
     </script>
   </body>
 </html>

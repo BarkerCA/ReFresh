@@ -26,6 +26,24 @@ body{
   a:hover{
     text-decoration: underline;
   }
+  
+  // Main Content Area
+  #main{
+    background: rgba(255,255,255,0.85);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: $rf-gray;
+    
+    #big_top_image{
+      margin-top: -50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('/assets/HalfMoonBay.jpg');
+      width: 100%;
+      height: 300px;
+    }
+  }
 }
 
 .topnav{
@@ -74,7 +92,6 @@ body{
       color: $white;
     }
   }
-  
 }
 
 #endorsement_panel{
@@ -131,23 +148,5 @@ body{
     //font-family: kaushan-script, cursive;
     @extend .text-center;
     color: $white;
-  }
-}
-
-// Main Content Area
-#main{
-  background: rgba(255,255,255,0.85);
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: $rf-gray;
-  
-  #big_top_image{
-    margin-top: -50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url('/assets/HalfMoonBay.jpg');
-    width: 100%;
-    height: 300px;
   }
 }

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # Leadership URLS
   get 'leadership'          => 'leadership#nuggets'
   get 'leadership/nuggets'  => 'leadership#nuggets'
+  get 'leadership/nuggets/:id' => 'leadership#nuggets'
   
   # Contact URLS
   get 'contact'             => 'contact#index'

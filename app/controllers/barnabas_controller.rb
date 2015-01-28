@@ -1,5 +1,5 @@
 class BarnabasController < ApplicationController
   def index
-    @page = {:title => 'The Barnabas Experience', :head_title => 'The Barnabas Experience'}
+    @page = {:title => 'Barnabas Experience', :head_title => 'Barnabas Experience'}
   end
 end
