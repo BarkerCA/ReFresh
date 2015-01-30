@@ -92,8 +92,8 @@ $include-html-global-classes: $include-html-classes;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
 
 // We use these as default colors throughout
 $primary-color: #3AB54A;
@@ -1373,10 +1373,10 @@ $topbar-height: 77px;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: $rf-green;
-// $topbar-dropdown-link-color: $white;
-$topbar-dropdown-link-bg: $rf-green;
-// $topbar-dropdown-link-weight: $font-weight-normal;
+// $topbar-dropdown-bg: $rf-green;
+$topbar-dropdown-link-color: $rf-green;
+// $topbar-dropdown-link-bg: $rf-green;
+$topbar-dropdown-link-weight: $font-weight-bold;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
 // $topbar-dropdown-toggle-alpha: 0.4;
@@ -1386,12 +1386,12 @@ $topbar-link-color: $rf-green;
 // $topbar-link-color-hover: $white;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+$topbar-link-weight: $font-weight-bold;
+$topbar-link-font-size: rem-calc(17);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-hover: #272727;
+$topbar-link-bg-hover: $rf-green;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
