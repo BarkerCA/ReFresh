@@ -19,35 +19,37 @@
   </head>
   <body class='<%= controller.controller_name %>'>
     
-    <div class="header-nav topofpage">
-      <div class='row'>
-        <div class='large-3 columns'>
-          <h1>
-            <a href='/'>
-              <img src='https://drqkr2smv75b.cloudfront.net/www/images/ReFresh_Logo_transparent.png'>
-            </a>
-          </h1>
-        </div>
-        <div class='large-9 columns topnav'>
-          <ul class='right button-group'>
-            <li>
-              <a class='button' href='/coaching'>Coaching</a>
-            </li>
-            <li>
-              <a class='button' href='/barnabas'>Barnabas Experience</a>
-            </li>
-            <li>
-              <a id="nav_contact" class='button' href='/contact'>Contact</a>
-            </li>
-            <li>
-              <button href="#" data-dropdown="about-menu" aria-controls="about-menu" aria-expanded="false" class="button dropdown">About</button><br> 
-              <ul id="about-menu" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1"> 
-                <li><a href="/about/refresh">ReFresh Ministries</a></li> 
-                <li><a href="/about/cal">Cal Woods</a></li> 
-                <li><a href="#">Another Bio</a></li> 
+    <div id="topofpage" class="contain-to-grid"> 
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <a href="/"><img style="height: 75px;" src='https://drqkr2smv75b.cloudfront.net/www/images/ReFresh_Logo_transparent.png'></a>
+          </li>
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/barnabas">Barnabas Experience</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="has-dropdown">
+              <a href="#">About</a>
+              <ul class="dropdown">
+                <li><a href="/about">ReFresh Ministries</a></li>
+                <li><a href="/about/cal">Cal Woods</a></li>
+                <li><a href="/about/ron">Ron Sylvia</a></li>
               </ul>
             </li>
           </ul>
-        </div>
-      </div>
+      
+          <!-- Left Nav Section -->
+          <ul style="display: none;" class="left">
+            <li><a href="#">Left Button</a></li>
+          </ul>
+        </section>
+        
+      </nav>
     </div>

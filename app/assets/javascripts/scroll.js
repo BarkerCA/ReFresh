@@ -1,7 +1,9 @@
 $(document).ready(function (){
+  var topbar_height = 77;
+  
   $("#nav_top").click(function (){
     $('html, body').animate({
-        scrollTop: $(".topofpage").offset().top
+        scrollTop: $("#topofpage").offset().top
     }, 2000);
   });
   $("#nav_about").click(function (){
