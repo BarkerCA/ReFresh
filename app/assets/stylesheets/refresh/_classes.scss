@@ -1,0 +1,75 @@
+.headings{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.green_rows{
+  background-color: rgba($rf-green, 0.85);
+  color: $white;
+  padding: 50px 0px 50px 0px;
+  
+  h1{
+    @extend .headings;
+    color: $white;
+  }
+  
+  a, a:hover, a:active{
+    color: white;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  .button:hover{
+    background-color: white;
+    color: $rf-green;
+    border: 1px solid $rf-green;
+    text-decoration: none;
+  }
+  
+}
+
+.white_rows{
+  background-color: rgba($white, 0.85);
+  color: $rf-green;
+  padding: 50px 0px 50px 0px;
+  
+  h1{
+    @extend .headings;
+    color: $rf-green;
+  }
+  
+  a, a:hover, a:active{
+    color: $rf-green;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .button{
+    background-color: transparent;
+    color: $rf-green;
+    border: 1px solid $rf-green;
+  }
+  .button:hover{
+    background-color: $rf-green;
+    color: $white;
+    border: 1px solid $white;
+    text-decoration: none;
+  }
+  
+}
+
+.full-background{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}

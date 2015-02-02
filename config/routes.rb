@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   # Site Root
   root 'home#index'
   
+  # Design URLS
+  get 'design'                  => 'design#index'
+  
   # Barnabas URLS
   get 'barnabas'                => 'barnabas#index'
   

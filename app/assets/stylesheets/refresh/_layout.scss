@@ -1,30 +1,14 @@
-.full-background{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-}
+@import "classes";
 
 body{
+  
   @extend .full-background;
   background-position: 0px 0px;
   background-image: url('https://drqkr2smv75b.cloudfront.net/www/images/ocean1.jpg');
   color: white;
   
   h1,h2,h3,h4,h5,h6{
-
-  }
-  
-  h1,h2,h3,h4,h5,h6{
     color: $rf-green;
-  }
-  
-  a, a:hover, a:active{
-    color: $rf-green;
-  }
-  
-  a:hover{
-    text-decoration: underline;
   }
   
   // Main Content Area
@@ -44,109 +28,57 @@ body{
       height: 300px;
     }
   }
-}
+ 
+  #container{
+    
+    #mission{
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    
+    #endorsement{
+      @extend .white_rows;
+    }
+    
+    #coaching{
+      @extend .green_rows;
+      
+    }
+    
+    #barnabas{
+      @extend .white_rows;
+      
+    }
+    
+    #leadership{
+      @extend .green_rows;
+      
+      
+      
+      .leftside{
+        
+      }
+      
+      .rightside{
 
-.topnav{
-  margin-top: 20px;
-}
-
-.example-orbit li{
-  list-style: none;
-  
-  img{
-    display: none;
-  }
-}
-
-// Front page styling
-.base_front_page_section{
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.header-nav{
-  background: $rf-gray;
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-  // position: fixed;
-  // width: 100%;
-  // z-index: 1500;
-  // height: 90px;
-}
-
-.footer-nav{
-  padding-top: 25px;
-  padding-bottom: 10px;
-  background: $rf-gray;
-}
-
-.home-top{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  
-  #orbital{
-    h1{
-      font-family: source-sans-pro, sans-serif;
-      font-variant: small-caps;
-      text-shadow: 3px 3px 5px rgba(0,0,0,0.9);
-      @extend .text-center;
-      color: $white;
+      }
+    }
+    
+    #contact{
+      @extend .white_rows;
+    }
+    
+    #about{
+      @extend .green_rows;
     }
   }
-}
-
-#endorsement_panel{
-  @extend .base_front_page_section;
-  background: rgba(255,255,255,0.85);
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: $rf-gray;
   
-  #endorsement:before{
-    font-family: source-sans-pro, sans-serif;
-    content: '"';
-    font-size: 2em;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #endorsement:after{
-    font-family: source-sans-pro, sans-serif;
-    content: '"';
-    font-size: 2em;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.tripanels{
-  @extend .base_front_page_section;
-  background: rgba($rf-gray,0.85);
-  
-  img{
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-    border: 1px solid $rf-gray;
-  }
-}
-
-#contact_panel{
-  @extend .base_front_page_section;
-  background: rgba(255,255,255,0.85);
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-#contact-modal{
-  color: $rf-gray;
-}
-
-#about_panel{
-  @extend .base_front_page_section;
-  background: rgba($rf-green, 0.85);
-  color: $white;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  h2{
-    //font-family: kaushan-script, cursive;
-    @extend .text-center;
+  .footer-nav{
     color: $white;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    background: $rf-gray;
   }
 }
+
+@import "old/front_page";

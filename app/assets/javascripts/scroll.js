@@ -6,14 +6,33 @@ $(document).ready(function (){
         scrollTop: $("#topofpage").offset().top
     }, 2000);
   });
+  
+  $("#nav_coaching").click(function (){
+    $('html, body').animate({
+        scrollTop: $("#coaching").offset().top
+    }, 2000);
+  });
+  
+  $("#nav_barnabas").click(function (){
+    $('html, body').animate({
+        scrollTop: $("#barnabas").offset().top
+    }, 2000);
+  });
+  
+  $("#nav_leadership").click(function (){
+    $('html, body').animate({
+        scrollTop: $("#leadership").offset().top
+    }, 2000);
+  });
+  
   $("#nav_about").click(function (){
     $('html, body').animate({
-        scrollTop: $("#about_panel").offset().top
+        scrollTop: $("#about").offset().top
     }, 2000);
   });
   $("#nav_contact").click(function (){
     $('html, body').animate({
-        scrollTop: $("#contact_panel").offset().top
+        scrollTop: $("#contact").offset().top
     }, 2000);
   });
 });
