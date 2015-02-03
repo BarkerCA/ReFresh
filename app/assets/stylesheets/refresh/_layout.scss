@@ -1,17 +1,27 @@
-@import "classes";
-
 body{
   
+  //
+  // Application Level Styling
+  //
   @extend .full-background;
   background-position: 0px 0px;
   background-image: url('https://drqkr2smv75b.cloudfront.net/www/images/ocean1.jpg');
-  color: white;
+  //color: $white;
   
   h1,h2,h3,h4,h5,h6{
     color: $rf-green;
   }
   
+  .footer-nav{
+    color: $white;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    background: $rf-gray;
+  }
+  
+  //
   // Main Content Area
+  //
   #main{
     background: rgba(255,255,255,0.85);
     padding-top: 25px;
@@ -28,7 +38,10 @@ body{
       height: 300px;
     }
   }
- 
+
+  //
+  // Front page styling only
+  //
   #container{
     
     #mission{
@@ -42,26 +55,14 @@ body{
     
     #coaching{
       @extend .green_rows;
-      
     }
     
     #barnabas{
       @extend .white_rows;
-      
     }
     
     #leadership{
       @extend .green_rows;
-      
-      
-      
-      .leftside{
-        
-      }
-      
-      .rightside{
-
-      }
     }
     
     #contact{
@@ -72,13 +73,4 @@ body{
       @extend .green_rows;
     }
   }
-  
-  .footer-nav{
-    color: $white;
-    padding-top: 25px;
-    padding-bottom: 10px;
-    background: $rf-gray;
-  }
 }
-
-@import "old/front_page";

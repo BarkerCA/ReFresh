@@ -6,4 +6,8 @@ class AboutController < ApplicationController
   def cal
     @page = {:title => 'About Cal Woods', :head_title => 'Cal Woods'}
   end
+  
+  def ron
+    @page = {:title => 'About Ron Sylvia', :head_title => 'Ron Sylvia'}
+  end
 end

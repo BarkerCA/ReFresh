@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get 'about/refresh'           => 'about#refresh'
   get 'cal'                     => 'about#cal'
   get 'about/cal'               => 'about#cal'
+  get 'ron'                     => 'about#ron'
+  get 'about/ron'               => 'about#ron'
 
   # Leadership URLS
   get 'leadership'              => 'leadership#nuggets'
