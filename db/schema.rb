@@ -11,9 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128164308) do
+ActiveRecord::Schema.define(version: 20150204022018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "apppointments", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.date     "date"
+    t.text     "location"
+    t.text     "memo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "nuggets", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "subject",    limit: 255
+    t.string   "location",   limit: 255
+    t.text     "memo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

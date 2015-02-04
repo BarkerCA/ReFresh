@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :nuggets
+
   # Site Root
   root 'home#index'
   
@@ -23,7 +25,7 @@ Rails.application.routes.draw do
   # Leadership URLS
   get 'leadership'              => 'leadership#nuggets'
   get 'leadership/nuggets'      => 'leadership#nuggets'
-  get 'leadership/nuggets/:id'  => 'leadership#nuggets'
+  get 'leadership/nuggets/:id'  => 'leadership#nugget'
   
   # Contact URLS
   get 'contact'                 => 'contact#index'

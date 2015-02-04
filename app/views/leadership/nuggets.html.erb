@@ -1,7 +1,11 @@
 <div class="row">
   <div class="small-12 large-12 columns">
-    <h2><%= page_title %></h2>
-    <hr />
-    <%= raw @nugget %>
+    <% @nuggets.each do |nugget| %>
+    <article class="nugget">
+      <h2><%= nugget.title %></h2>
+      <hr />
+      <%= raw nugget.body %>
+    </article>
+    <% end %>
   </div>
 </div>
