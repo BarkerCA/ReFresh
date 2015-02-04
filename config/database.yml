@@ -82,4 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: refresh_production
+  database: db13059
+  username: app
+  host: 210.193.180.199
+  password: <%= ENV['DB_PASSWORD'] %>
