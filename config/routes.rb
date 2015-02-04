@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :nuggets
+  namespace :admin do
+    resources :nuggets
+  end
 
   # Site Root
   root 'home#index'

@@ -1,4 +1,4 @@
-class NuggetsController < ApplicationController
+class Admin::NuggetsController < ApplicationController
   before_action :set_nugget, only: [:show, :edit, :update, :destroy]
 
   # GET /nuggets
@@ -31,7 +31,7 @@ class NuggetsController < ApplicationController
 
     respond_to do |format|
       if @nugget.save
-        format.html { redirect_to @nugget, notice: 'Nugget was successfully created.' }
+        format.html { redirect_to admin_nugget_path(@nugget), notice: 'Nugget was successfully created.' }
         format.json { render :show, status: :created, location: @nugget }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class NuggetsController < ApplicationController
   def update
     respond_to do |format|
       if @nugget.update(nugget_params)
-        format.html { redirect_to @nugget, notice: 'Nugget was successfully updated.' }
+        format.html { redirect_to admin_nugget_path(@nugget), notice: 'Nugget was successfully updated.' }
         format.json { render :show, status: :ok, location: @nugget }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class NuggetsController < ApplicationController
   def destroy
     @nugget.destroy
     respond_to do |format|
-      format.html { redirect_to nuggets_url, notice: 'Nugget was successfully destroyed.' }
+      format.html { redirect_to admin_nuggets_url, notice: 'Nugget was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
