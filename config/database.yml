@@ -93,3 +93,7 @@ production:
   # Heroku
   #
   # url: <%= ENV['DATABASE_URL'] %>
+  database: d23ko20fphncuj
+  username: ifwumsjimpxtca
+  host: ec2-54-221-243-6.compute-1.amazonaws.com
+  password: <%= ENV['DB_PASSWORD'] %>
