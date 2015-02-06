@@ -82,7 +82,14 @@ test:
 #
 production:
   <<: *default
-  database: db13059
-  username: app
-  host: 210.193.180.199
-  password: <%= ENV['DB_PASSWORD'] %>
+  #
+  # NineFold
+  #
+  # database: db13059
+  # username: app
+  # host: 210.193.180.199
+  # password: <%= ENV['DB_PASSWORD'] %>
+  #
+  # Heroku
+  #
+  url: <%= ENV['DATABASE_URL'] %>
