@@ -1,5 +1,5 @@
 class Admin::UsersController < ApplicationController
-  before_filter :require_authorization, only: [:index, :show, :edit, :update, :destroy]
+  before_filter :require_authorization, only: [:index, :new, :show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
