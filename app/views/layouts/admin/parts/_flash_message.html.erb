@@ -1,0 +1,10 @@
+<% unless flash.empty? %>
+<div class="row">
+  <div data-alert class="alert-box success radius" class="small-12 columns">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+    <a href="#" class="close">&times;</a>
+  </div>
+</div>
+<% end %>

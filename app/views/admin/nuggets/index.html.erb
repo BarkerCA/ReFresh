@@ -2,14 +2,13 @@
   <div class="small-12 large-12 columns">
     <h2><%= page_title %></h2>
     <hr />
-    <p id="notice"><%= notice %></p>
-    
+
     <table>
       <thead>
         <tr>
           <th>Title</th>
           <th>Body</th>
-          <th colspan="3"></th>
+          <th colspan="2"></th>
         </tr>
       </thead>
     
@@ -18,9 +17,8 @@
           <tr>
             <td><%= nugget.title %></td>
             <td><%= nugget.body %></td>
-            <td><%= link_to 'Show', admin_nugget_path(nugget) %></td>
-            <td><%= link_to 'Edit', edit_admin_nugget_path(nugget) %></td>
-            <td><%= link_to 'Destroy', admin_nugget_path(nugget), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Edit', edit_admin_nugget_path(nugget), class: "button" %></td>
+            <td><%= link_to 'Delete', admin_nugget_path(nugget), method: :delete, data: { confirm: 'Are you sure?' }, class: "button" %></td>
           </tr>
         <% end %>
       </tbody>
@@ -28,6 +26,6 @@
     
     <br>
     
-    <%= link_to 'New Nugget', new_admin_nugget_path %> 
+    <%= link_to 'New Nugget', new_admin_nugget_path, class: "button" %> 
   </div>
 </div>

@@ -1,11 +1,21 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-    resources :nuggets
-  end
-
   # Site Root
   root 'home#index'
+  
+  # Admin URLS
+  get "admin" => "admin/home#index"
+  namespace :admin do
+
+    get "home"    => "home#index",        :as => "root"
+    get "logout"  => "sessions#destroy",  :as => "log_out"
+    get "login"   => "sessions#new",      :as => "log_in"
+    get "signup"  => "users#new",         :as => "sign_up"
+    
+    resources :users
+    resources :sessions
+    resources :nuggets
+  end
   
   # Design URLS
   get 'design'                  => 'design#index'

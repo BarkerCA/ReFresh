@@ -1,17 +1,18 @@
 class Admin::NuggetsController < ApplicationController
+  before_filter :require_authorization
   before_action :set_nugget, only: [:show, :edit, :update, :destroy]
 
   # GET /nuggets
   # GET /nuggets.json
   def index
-    @page = {:title => 'Nuggets Listing', :head_title => 'Nuggets Listing'}
-    @nuggets = Nugget.all
+    @page = {:title => 'Nuggets Admin', :head_title => 'Nuggets Admin'}
+    @nuggets = Nugget.all.reverse
   end
 
   # GET /nuggets/1
   # GET /nuggets/1.json
   def show
-    @page = {:title => 'Nuggets Listing', :head_title => 'Nuggets Listing'}
+    @page = {:title => "#{@nugget.title}", :head_title => 'Viewing Nugget'}
   end
 
   # GET /nuggets/new
@@ -22,6 +23,7 @@ class Admin::NuggetsController < ApplicationController
 
   # GET /nuggets/1/edit
   def edit
+    @page = {:title => "#{@nugget.title}", :head_title => 'Editing Nugget'}
   end
 
   # POST /nuggets
@@ -45,7 +47,7 @@ class Admin::NuggetsController < ApplicationController
   def update
     respond_to do |format|
       if @nugget.update(nugget_params)
-        format.html { redirect_to admin_nugget_path(@nugget), notice: 'Nugget was successfully updated.' }
+        format.html { redirect_to admin_nuggets_path(@nugget), notice: 'Nugget was successfully updated.' }
         format.json { render :show, status: :ok, location: @nugget }
       else
         format.html { render :edit }
@@ -73,5 +75,9 @@ class Admin::NuggetsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def nugget_params
       params.require(:nugget).permit(:title, :body)
+    end
+    
+    def require_authorization
+      redirect_to admin_log_in_path, :notice => "You must be logged in for access." unless session[:user_id]
     end
 end
