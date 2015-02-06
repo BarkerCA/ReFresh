@@ -85,15 +85,15 @@ production:
   #
   # NineFold
   #
-  database: db13059
-  username: app
-  host: 210.193.180.199
-  password: <%= ENV['DB_PASSWORD'] %>
+  # database: db13059
+  # username: app
+  # host: 210.193.180.199
+  # password: <%= ENV['DB_PASSWORD'] %>
   #
   # Heroku
   #
-  # url: <%= ENV['DATABASE_URL'] %>
-  database: d23ko20fphncuj
-  username: ifwumsjimpxtca
-  host: ec2-54-221-243-6.compute-1.amazonaws.com
-  password: <%= ENV['DB_PASSWORD'] %>
+  url: <%= ENV['HEROKU_POSTGRESQL_GOLD_URL'] %>
+  # database: d23ko20fphncuj
+  # username: ifwumsjimpxtca
+  # host: ec2-54-221-243-6.compute-1.amazonaws.com
+  # password: <%= ENV['DB_PASSWORD'] %>
