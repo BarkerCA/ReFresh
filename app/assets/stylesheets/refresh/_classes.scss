@@ -16,6 +16,7 @@
     @extend .headings;
     color: $white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    border-bottom: 1px solid $white;
   }
   
   a, a:hover, a:active{
@@ -38,7 +39,7 @@
     text-decoration: none;
   }
   img{
-    transform: rotate(3.5deg);
+    @include rotate_element(3.5deg);
   }
   
 }
@@ -52,6 +53,7 @@
     @extend .headings;
     color: $rf-green;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    border-bottom: 1px solid $rf-green;
   }
   
   a, a:hover, a:active{
@@ -74,7 +76,7 @@
     text-decoration: none;
   }
   img{
-    transform: rotate(-3.5deg);
+    @include rotate_element(-3.5deg);
   }
   
 }

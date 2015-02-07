@@ -52,7 +52,7 @@ body{
     #endorsement{
       @extend .white_rows;
       img{
-        transform: rotate(0deg);
+        @include rotate_element(0deg);
       }
     }
     
