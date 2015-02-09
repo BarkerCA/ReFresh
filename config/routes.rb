@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get "logout"  => "sessions#destroy",  :as => "log_out"
     get "login"   => "sessions#new",      :as => "log_in"
     get "signup"  => "users#new",         :as => "sign_up"
-    
+
     resources :users
     resources :sessions
     resources :nuggets
@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get 'leadership/nuggets/:id'  => 'leadership#nugget'
   
   # Contact URLS
+  resources :contact
   get 'contact'                 => 'contact#index'
   
   # Giving URLS

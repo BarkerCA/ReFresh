@@ -65,10 +65,14 @@
         <div class="small-12 large-6 columns rightside">
           <ol style="margin-top: 45px;">
             <% @nuggets.each do |nugget| %>
-            <li><a href="/leadership/nuggets/<%= nugget.id %>"><%= nugget.title %></li>
+            <li><a href="/leadership/nuggets/<%= nugget.id %>"><%= nugget.title %></a></li>
             <% end %>
           </ol>
           <p class="text-center"><a class="button" href="/leadership">Leadership Nugget Archives</a></p>
+        </div>
+        <div class="small-12 columns">
+          <h4 style="margin-top: 15px;" class="text-center">All leaders have been "PICKED UP" by someone that believed in them...</h4>
+          <h4 class="text-center">Now it's your turn!</h4>
         </div>
       </div>
     </div>
@@ -77,87 +81,66 @@
   <div id="contact">
     <div class='row'>
       <div class='large-12 columns'>
-        <div class='panel radius'>
-          <h4>Get in touch with ReFresh Ministries!</h4>
-          <div class='row'>
-            <div class='large-9 columns'>
-              <p>
-                For further information about <a href="/coaching">ReFresh Coaching</a> or the <a href="/barnabas">Barnabas Experience</a>, <a href='#' data-reveal-id="contact-modal">contact us</a>.
-              </p>
+        <h1>Contact ReFresh Ministries</h1>
+        <div style="background-color: white;" class='panel radius'>
+          <form id="contact_form" action="/contact" method="post">
+            <div class="row">
+              <div class="large-6 columns">
+                <div class="row collapse prefix-radius">
+                  <div class="small-3 columns">
+                    <span class="prefix">First Name</span>
+                  </div>
+                  <div class="small-9 columns">
+                    <input name="first_name" type="text" placeholder="John">
+                  </div>
+                </div>
+              </div>
+              <div class="large-6 columns">
+                <div class="row collapse postfix-radius">
+                  <div class="small-9 columns">
+                    <input type="text" placeholder="Zealot">
+                  </div>
+                  <div class="small-3 columns">
+                    <span name="last_name" class="postfix">Last Name</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class='large-3 columns'>
-              &nbsp;
+            <div class="row">
+              <div class="large-6 columns">
+                <div class="row collapse prefix-radius">
+                  <div class="small-3 columns">
+                    <span class="prefix">Email Address</span>
+                  </div>
+                  <div class="small-9 columns">
+                    <input name="email" type="text" placeholder="john@refreshministries.org">
+                  </div>
+                </div>
+              </div>
+              <div class="large-6 columns">
+                <div class="row collapse postfix-radius">
+                  <div class="small-9 columns">
+                    <input name="telephone" type="text" placeholder="555-555-5555">
+                  </div>
+                  <div class="small-3 columns">
+                    <span class="postfix">Telephone</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div id="contact-modal" class="reveal-modal" data-reveal>
-              <h2>Contact ReFresh Ministries</h2>
-              <p class="lead">
-                
-              </p>
-              
-              <form>
-                <div class="row">
-                  <div class="large-6 columns">
-                    <div class="row collapse prefix-radius">
-                      <div class="small-3 columns">
-                        <span class="prefix">First Name</span>
-                      </div>
-                      <div class="small-9 columns">
-                        <input type="text" placeholder="John">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="large-6 columns">
-                    <div class="row collapse postfix-radius">
-                      <div class="small-9 columns">
-                        <input type="text" placeholder="Zealot">
-                      </div>
-                      <div class="small-3 columns">
-                        <span class="postfix">Last Name</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="large-6 columns">
-                    <div class="row collapse prefix-radius">
-                      <div class="small-3 columns">
-                        <span class="prefix">Email Address</span>
-                      </div>
-                      <div class="small-9 columns">
-                        <input type="text" placeholder="john@refreshministries.org">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="large-6 columns">
-                    <div class="row collapse postfix-radius">
-                      <div class="small-9 columns">
-                        <input type="text" placeholder="555-555-5555">
-                      </div>
-                      <div class="small-3 columns">
-                        <span class="postfix">Telephone</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="large-12 columns">
-                    <label>Tell us a little about yourself.
-                      <textarea placeholder=""></textarea>
-                    </label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="large-12 columns">
-                    <a class="button radius">Send</a>
-                    <a class="button radius">Close</a>
-                  </div>
-                </div>
-              </form>
-              
-              <a class="close-reveal-modal">&#215;</a>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>Tell us a little about yourself.
+                  <textarea name="memo" placeholder=""></textarea>
+                </label>
+              </div>
             </div>
-          </div>
+            <div class="row">
+              <div class="large-12 columns">
+                <a id="btn_contact" class="button">Send</a>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
