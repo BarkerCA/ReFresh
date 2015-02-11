@@ -2,7 +2,7 @@ $(document).ready(function (){
   
   function do_scroll(anchor){
     $('html,body').animate({
-      scrollTop: $(anchor).offset().top
+      scrollTop: $(anchor).offset().top - 77
     }, 2000);
   };
   
