@@ -33,7 +33,7 @@ class Admin::NuggetsController < ApplicationController
 
     respond_to do |format|
       if @nugget.save
-        format.html { redirect_to admin_nugget_path(@nugget), notice: 'Nugget was successfully created.' }
+        format.html { redirect_to admin_nuggets_path(@nugget), notice: 'Nugget was successfully created.' }
         format.json { render :show, status: :created, location: @nugget }
       else
         format.html { render :new }

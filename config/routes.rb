@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   get 'leadership'              => 'leadership#nuggets'
   get 'leadership/nuggets'      => 'leadership#nuggets'
   get 'leadership/nuggets/:id'  => 'leadership#nugget'
+  get 'leadership/nugget_test'  => 'leadership#nugget_test'
   
   # Contact URLS
   resources :contact

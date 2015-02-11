@@ -17,4 +17,3 @@
 //= require foundation
 //= require scroll
 //= require reftagger.js
-$(function(){ $(document).foundation(); });

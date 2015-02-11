@@ -9,6 +9,10 @@ class LeadershipController < ApplicationController
     @page = {:title => 'Leadership Nuggets', :head_title => 'Leadership Nuggets'}
     @nuggets = Nugget.all.reverse_order
   end
+  
+  def nugget_test
+    @page = {:title => 'Nugget Test', :head_title => 'Nugget Test'}
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
