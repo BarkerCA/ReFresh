@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="ReFresh Ministries">
+    <meta name="msvalidate.01" content="96A642B9DF4B66510D77203D2FD932D6" />
     <link href="https://drqkr2smv75b.cloudfront.net/shared/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
     <link rel="apple-touch-icon" href="https://drqkr2smv75b.cloudfront.net/shared/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="76x76" href="https://drqkr2smv75b.cloudfront.net/shared/images/apple-touch-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="https://drqkr2smv75b.cloudfront.net/shared/images/apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="https://drqkr2smv75b.cloudfront.net/shared/images/apple-touch-icon-152x152.png">
     <title>ReFresh <%= head_page_title %></title>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'vendor/modernizr' %>
     <%= csrf_meta_tags %>
   </head>
   <body class='<%= controller.controller_name %>'>
-    
-    <div id="topofpage" class="contain-to-grid"> 
+    <div id="topofpage" style="display: none;"></div>
+    <div class="fixed contain-to-grid"> 
       <nav class="top-bar" data-topbar role="navigation" data-options="mobile_show_parent_link: false">
         <ul class="title-area">
           <li class="name">
@@ -33,17 +33,18 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <li><a href="/coaching">Coaching</a></li>
-            <li><a href="/barnabas">Barnabas Experience</a></li>
-            <li><a href="/leadership">Leadership</a></li>
-            <li><a href="/contact">Contact</a></li>
             <li class="has-dropdown">
               <a href="#">About</a>
               <ul class="dropdown">
                 <li><a href="/about">ReFresh Ministries</a></li>
                 <li><a href="/about/cal">Cal Woods</a></li>
+                <li><a href="/about/ron">Ron Sylvia</a></li>
               </ul>
             </li>
+            <li><a href="/coaching">Coaching</a></li>
+            <li><a href="/barnabas">Barnabas Experience</a></li>
+            <li><a href="/leadership">Leadership</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
       
           <!-- Left Nav Section -->

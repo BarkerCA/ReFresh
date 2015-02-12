@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :users
     resources :sessions
     resources :nuggets
+    resources :contacts
   end
   
   # Design URLS
@@ -41,8 +42,12 @@ Rails.application.routes.draw do
   get 'leadership/nugget_test'  => 'leadership#nugget_test'
   
   # Contact URLS
-  resources :contact
-  get 'contact'                 => 'contact#index'
+  get 'contact'                 => 'contacts#new'
+  get 'contact/sent'            => 'contacts#sent'
+  get 'contact/sent/:data'      => 'contacts#sent'
+  get 'contact/finished'        => 'contacts#finished'
+  get 'contact/finished/:data'  => 'contacts#finished'
+  post 'contact'                => 'contacts#create'
   
   # Giving URLS
   get 'giving'                  => 'giving#index'

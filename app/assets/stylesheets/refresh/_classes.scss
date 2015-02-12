@@ -7,6 +7,14 @@
   margin-bottom: 25px;
 }
 
+.rotate_left{
+  @include rotate_element(-3.5deg);
+}
+
+.rotate_right{
+  @include rotate_element(3.5deg);
+}
+
 .green_rows{
   background-color: rgba($rf-green, 0.85);
   color: $white;

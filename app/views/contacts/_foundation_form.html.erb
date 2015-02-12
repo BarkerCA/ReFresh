@@ -1,0 +1,80 @@
+<div class='row'>
+  <div class='large-12 columns'>
+      <div style="background-color: white;" class='panel radius'>
+      <%= form_for @contact, url: {action: "create"} do |f| %>
+        <% if @contact.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this nugget from being saved:</h2>
+      
+            <ul>
+            <% @contact.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+          <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">First Name</span>
+                </div>
+                <div class="small-9 columns">
+                  <%= f.text_field :first_name, placeholder:"John" %>
+                </div>
+              </div>
+            </div>
+            <div class="large-6 columns">
+              <div class="row collapse postfix-radius">
+                <div class="small-9 columns">
+                  <%= f.text_field :last_name, placeholder:"Zealot" %>
+                </div>
+                <div class="small-3 columns">
+                  <span name="last_name" class="postfix">Last Name</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Email Address</span>
+                </div>
+                <div class="small-9 columns">
+                  <%= f.text_field :email, placeholder:"john@refresh-ministries.org" %>
+                </div>
+              </div>
+            </div>
+            <div class="large-6 columns">
+              <div class="row collapse postfix-radius">
+                <div class="small-9 columns">
+                  <%= f.text_field :telephone, placeholder:"555-555-5555" %>
+                </div>
+                <div class="small-3 columns">
+                  <span class="postfix">Telephone</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Tell us a little about yourself.
+                <%= f.text_area :memo, style:"min-height: 200px;" %>
+              </label>
+            </div>
+            <div class="large-12 columns">
+              <label>What is the color of the word ReFresh at the top of the screen?
+                <input name="challenge" type="text">
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <%= f.submit value:"Send", class:"button" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>

@@ -2,7 +2,7 @@
   <div id="mission">
     <div class="row">
       <div class='small-12 columns'>
-        <img src="https://drqkr2smv75b.cloudfront.net/www/images/frontpage_healthy4.png" />
+        <img src="https://drqkr2smv75b.cloudfront.net/www/images/frontpage_healthy5.png" />
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
       <div class='small-12 columns'>
         <h1>The Barnabas Experience</h1>
         <div class="small-12 columns text-center">
-          <img id="barnabas_upper_image" class="home_images" src='https://drqkr2smv75b.cloudfront.net/www/images/CalandPastor_SM.jpg' />
+          <img id="barnabas_upper_image" class="home_images" src='https://drqkr2smv75b.cloudfront.net/www/images/ggate1-sm.jpg' />
         </div>
         <div class="small-12 large-6 columns leftside">
           <p>
@@ -49,7 +49,7 @@
           <p class="text-center"><a class="button" href="/barnabas">More About The Barnabas Experience</a></p>
         </div>
         <div class="small-12 large-6 columns rightside text-center">
-          <img id="barnabas_lower_image" class="home_images" src='https://drqkr2smv75b.cloudfront.net/www/images/CalandPastor_SM.jpg' />
+          <img id="barnabas_lower_image" class="home_images" src='https://drqkr2smv75b.cloudfront.net/www/images/ggate1-sm.jpg' />
         </div>
       </div>
     </div>
@@ -78,73 +78,91 @@
     </div>
   </div>
   
+
   <div id="contact">
     <div class='row'>
-      <div class='large-12 columns'>
+      <div class='small-12 large-12 columns'>
         <h1>Contact ReFresh Ministries</h1>
-        <div style="background-color: white;" class='panel radius'>
-          <form id="contact_form" action="/contact" method="post">
-            <div class="row">
-              <div class="large-6 columns">
-                <div class="row collapse prefix-radius">
-                  <div class="small-3 columns">
-                    <span class="prefix">First Name</span>
+          <div style="background-color: white;" class='panel radius'>
+            <%= form_for @contact, url: {controller: "contacts", action: "create"} do |f| %>
+              <% if @contact.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this nugget from being saved:</h2>
+            
+                  <ul>
+                  <% @contact.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+                <div class="row">
+                  <div class="large-6 columns">
+                    <div class="row collapse prefix-radius">
+                      <div class="small-3 columns">
+                        <span class="prefix">First Name</span>
+                      </div>
+                      <div class="small-9 columns">
+                        <%= f.text_field :first_name, placeholder:"John" %>
+                      </div>
+                    </div>
                   </div>
-                  <div class="small-9 columns">
-                    <input name="first_name" type="text" placeholder="John">
+                  <div class="large-6 columns">
+                    <div class="row collapse postfix-radius">
+                      <div class="small-9 columns">
+                        <%= f.text_field :last_name, placeholder:"Zealot" %>
+                      </div>
+                      <div class="small-3 columns">
+                        <span name="last_name" class="postfix">Last Name</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="large-6 columns">
-                <div class="row collapse postfix-radius">
-                  <div class="small-9 columns">
-                    <input type="text" placeholder="Zealot">
+                <div class="row">
+                  <div class="large-6 columns">
+                    <div class="row collapse prefix-radius">
+                      <div class="small-3 columns">
+                        <span class="prefix">Email Address</span>
+                      </div>
+                      <div class="small-9 columns">
+                        <%= f.text_field :email, placeholder:"john@refresh-ministries.org" %>
+                      </div>
+                    </div>
                   </div>
-                  <div class="small-3 columns">
-                    <span name="last_name" class="postfix">Last Name</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-6 columns">
-                <div class="row collapse prefix-radius">
-                  <div class="small-3 columns">
-                    <span class="prefix">Email Address</span>
-                  </div>
-                  <div class="small-9 columns">
-                    <input name="email" type="text" placeholder="john@refreshministries.org">
-                  </div>
-                </div>
-              </div>
-              <div class="large-6 columns">
-                <div class="row collapse postfix-radius">
-                  <div class="small-9 columns">
-                    <input name="telephone" type="text" placeholder="555-555-5555">
-                  </div>
-                  <div class="small-3 columns">
-                    <span class="postfix">Telephone</span>
+                  <div class="large-6 columns">
+                    <div class="row collapse postfix-radius">
+                      <div class="small-9 columns">
+                        <%= f.text_field :telephone, placeholder:"555-555-5555" %>
+                      </div>
+                      <div class="small-3 columns">
+                        <span class="postfix">Telephone</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-12 columns">
-                <label>Tell us a little about yourself.
-                  <textarea name="memo" placeholder=""></textarea>
-                </label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-12 columns">
-                <a id="btn_contact" class="button">Send</a>
-              </div>
-            </div>
-          </form>
-        </div>
+                <div class="row">
+                  <div class="large-12 columns">
+                    <label>Tell us a little about yourself.
+                      <%= f.text_area :memo, style:"min-height: 200px;" %>
+                    </label>
+                  </div>
+                  <div class="large-12 columns">
+                    <label>
+                      What is the color of the word <span class="rf-green">ReFresh</span> in our logo at the top of the screen?
+                      <input name="challenge" type="text">
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-12 columns">
+                    <%= f.submit value:"Send", class:"button" %>
+                  </div>
+                </div>
+              <% end %>
+          </div>
       </div>
     </div>
-  </div>
+  </div>  
   
   <div id="about">
     <div class="row">

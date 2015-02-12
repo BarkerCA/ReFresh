@@ -3,7 +3,7 @@
     <h2><%= page_title %></h2>
     <hr />
     <div style="background-color: white;" class='panel radius'>
-      <form id="contact_form" action="/contact" method="post">
+      <%= form_tag '/admin/contacts', id: "contact_form" do %>
         <div class="row">
           <div class="large-6 columns">
             <div class="row collapse prefix-radius">
@@ -11,14 +11,14 @@
                 <span class="prefix">First Name</span>
               </div>
               <div class="small-9 columns">
-                <input name="first_name" type="text" placeholder="John">
+                <input name="first_name" type="text" placeholder="John" value="<%= @params[:first_name] %>">
               </div>
             </div>
           </div>
           <div class="large-6 columns">
             <div class="row collapse postfix-radius">
               <div class="small-9 columns">
-                <input type="text" placeholder="Zealot">
+                <input type="text" placeholder="Zealot" value="<%= @params[:last_name] %>">
               </div>
               <div class="small-3 columns">
                 <span name="last_name" class="postfix">Last Name</span>
@@ -33,14 +33,14 @@
                 <span class="prefix">Email Address</span>
               </div>
               <div class="small-9 columns">
-                <input name="email" type="text" placeholder="john@refreshministries.org">
+                <input name="email" type="text" placeholder="john@refreshministries.org" value="<%= @params[:email] %>">
               </div>
             </div>
           </div>
           <div class="large-6 columns">
             <div class="row collapse postfix-radius">
               <div class="small-9 columns">
-                <input name="telephone" type="text" placeholder="555-555-5555">
+                <input name="telephone" type="text" placeholder="555-555-5555" value="<%= @params[:telephone] %>">
               </div>
               <div class="small-3 columns">
                 <span class="postfix">Telephone</span>
@@ -51,8 +51,12 @@
         <div class="row">
           <div class="large-12 columns">
             <label>Tell us a little about yourself.
-              <textarea name="memo" placeholder=""></textarea>
+              <textarea style="min-height: 200px;" name="memo" placeholder=""><%= @params[:memo] %></textarea>
             </label>
+          </div>
+          <div class="large-12 columns">
+            <label style="color: red;">What color is the word ReFresh at the top of the screen? (Incorrect Answer)</label>
+            <input name="answer" type="text" placeholder="answer?" value="<%= @params[:answer] %>">
           </div>
         </div>
         <div class="row">
@@ -60,7 +64,7 @@
             <a id="btn_contact" class="button">Send</a>
           </div>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>
