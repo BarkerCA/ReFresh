@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require fastclick
+// require turbolinks
+// require fastclick
 //= require foundation
 //= require scroll
 //= require reftagger.js

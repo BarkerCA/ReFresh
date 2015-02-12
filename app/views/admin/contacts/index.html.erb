@@ -24,7 +24,7 @@
             <td><%= contact.telephone %></td>
             <td><%= contact.memo %></td>
             <td><%= link_to 'Edit', edit_admin_contact_path(contact) %></td>
-            <td><%= link_to 'Destroy', admin_contact_path(contact), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Delete', admin_contact_path(contact), method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
