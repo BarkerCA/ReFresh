@@ -44,9 +44,15 @@ body{
   //
   #container{
     
+    #healthy_banner{
+      background-color: $rf-gray;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: none;
+    }
+    
     #mission{
-      padding-top: 50px;
-      padding-bottom: 50px;
+      display: none;
     }
     
     #endorsement{

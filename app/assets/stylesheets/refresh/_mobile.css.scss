@@ -9,6 +9,9 @@
     // Front Page Styling
     //
     #container{
+      #mission{
+        height: 0px;
+      }
       #coaching{
         img{
           margin-top: 10px;
@@ -45,6 +48,9 @@
         letter-spacing: rem-calc(5);
         padding-bottom: 15px;
         margin-bottom: 35px;
+      }
+      #mission{
+        height: 400px;
       }
       #coaching{
         img{
