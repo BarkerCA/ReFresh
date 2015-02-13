@@ -87,7 +87,7 @@ Rails.application.configure do
     user_name:            ENV['MANDRILL_USERNAME'],
     password:             ENV['MANDRILL_APIKEY'],
     authentication:       :plain,
-    #enable_starttls_auto: true  
+    enable_starttls_auto: true  
   }
   config.action_mailer.delivery_method = :smtp
   
