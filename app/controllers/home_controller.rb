@@ -4,4 +4,9 @@ class HomeController < ApplicationController
     @nuggets = Nugget.last(5).reverse
     @contact = Contact.new
   end
+  
+  def mail_test
+    @user = {:first_name => "Chris", :email => 'contact@refresh-ministries.org'}
+    MessageMailer.contact_email(@user).deliver_now
+  end
 end
