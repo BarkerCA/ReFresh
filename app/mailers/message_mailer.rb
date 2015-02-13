@@ -8,7 +8,7 @@ class MessageMailer < ApplicationMailer
     # 
     @user = contact
     @url = 'http://www.refresh-ministries.org'
-    mail(to: @user[:email], subject: 'Sample Rails Email')
+    mail(to: @user.email, cc: 'contact@refresh-ministries.org', subject: "New Message For ReFresh Ministries")
   end
   
 end

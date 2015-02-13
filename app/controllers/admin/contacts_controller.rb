@@ -32,6 +32,7 @@ class Admin::ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     respond_to do |format|
       if @contact.save
+        MessageMailer.contact_email(@contact).deliver_now
         format.html { redirect_to admin_contacts_path, notice: 'Thank you for contacting ReFresh Ministries' }
         format.json { render :show, status: :created, location: @contact }
       else

@@ -1,9 +1,14 @@
-<h1>Welcome to example.com, <%= @user[:first_name] %></h1>
+<h1>Welcome to example.com, <%= @user.first_name %></h1>
 <p>
-  You have successfully signed up to example.com,
-  your username is: <%= @user[:email] %>.<br>
+  You have successfully signed up to ReFresh Ministries,
+  your username is: <%= @user.email %>.<br>
 </p>
 <p>
   To login to the site, just follow this link: <%= @url %>.
 </p>
 <p>Thanks for joining and have a great day!</p>
+
+<h2>Contents of your email to us:</h2>
+<div>
+  <%=raw @user.memo %>
+</div>

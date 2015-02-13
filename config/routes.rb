@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # Site Root
   root 'home#index'
-  get 'mailtest' => 'home#mail_test'
+  #get 'mailtest' => 'home#mail_test'
   
   # Admin URLS
   get "admin" => "admin/home#index"
