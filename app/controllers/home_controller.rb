@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
   
   def mail_test
-    @user = {:first_name => "Chris", :email => 'contact@refresh-ministries.org'}
+    @user = {:first_name => "Chris", :email => 'chris.a.barker@icloud.com'}
     MessageMailer.contact_email(@user).deliver_now
   end
 end
