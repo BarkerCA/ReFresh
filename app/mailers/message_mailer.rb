@@ -1,5 +1,7 @@
 class MessageMailer < ApplicationMailer
-  default from: 'contact@refresh-ministries.org'
+  name = "ReFresh Ministries"
+  email = "contact@refresh-ministries.org"
+  default from: %("#{name}" <#{email}>)
   
   def contact_email(contact)
     #
