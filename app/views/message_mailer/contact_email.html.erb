@@ -1,5 +1,4 @@
-<h1>New Message For ReFresh Ministries</h1>
-
+<h1 class="text-center" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;">New Message For ReFresh Ministries</h1>
 <div>
   <p>First Name: <%= @user.first_name.capitalize %></p>
 </div>
@@ -9,14 +8,16 @@
 </div>
 
 <div>
-  <p>Email Address: <%= @user.email %></p>
+  <p>Email Address: <a href="mailto:<%= @user.email %>"><%= @user.email %></a></p>
 </div>
 
 <div>
-  <p>Telephone Number: <%= @user.telephone %></p>
+  <p>Telephone Number: <a href="tel:<%= @user.telephone %>"><%= @user.telephone %></a></p>
 </div>
 
+<hr />
+
 <div>
-  <p style="font-weight: bold;"><%= @user.first_name %> <%= @user.last_name %> says this:</p>
+  <p class="rf-green" style="font-weight: bold;"><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %> says this:</p>
   <%=raw @user.memo %>
 </div>

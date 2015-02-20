@@ -1,4 +1,4 @@
-<h1>Thank You For Contacting ReFresh Ministries</h1>
+<h1 class="text-center" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;">Thank You For Contacting ReFresh Ministries</h1>
 
 <div>
   <p>You sent us the following information:</p>
@@ -13,12 +13,14 @@
 </div>
 
 <div>
-  <p>Email Address: <%= @user.email %></p>
+  <p>Email Address: <a href="mailto:<%= @user.email %>"><%= @user.email %></a></p>
 </div>
 
 <div>
-  <p>Telephone Number: <%= @user.telephone %></p>
+  <p>Telephone Number: <a href="tel:<%= @user.telephone %>"><%= @user.telephone %></a></p>
 </div>
+
+<hr />
 
 <div>
   <%=raw @user.memo %>

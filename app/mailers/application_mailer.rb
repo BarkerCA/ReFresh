@@ -1,4 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "ReFresh Ministries <contact@refresh-ministries.org>"
+  name = "ReFresh Ministries"
+  email = "contact@refresh-ministries.org"
+  default from: %("#{name}" <#{email}>)
   layout 'mailer'
 end
