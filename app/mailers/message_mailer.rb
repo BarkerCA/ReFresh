@@ -7,8 +7,16 @@ class MessageMailer < ApplicationMailer
     # :first_name, :last_name, :email, :telephone, :memo
     # 
     @user = contact
-    @url = 'http://www.refresh-ministries.org'
-    mail(to: @user.email, cc: 'contact@refresh-ministries.org', subject: "New Message For ReFresh Ministries")
+    mail(to: 'contact@refresh-ministries.org', subject: "New Message For ReFresh Ministries")
+  end
+  
+  def thankyou_email(contact)
+    #
+    # contact is an object expected to have the following attributes
+    # :first_name, :last_name, :email, :telephone, :memo
+    # 
+    @user = contact
+    mail(to: @user.email, subject: "Thank You For Contacting ReFresh Ministries")
   end
   
 end

@@ -1,4 +1,8 @@
-<h1>New Message For ReFresh Ministries</h1>
+<h1>Thank You For Contacting ReFresh Ministries</h1>
+
+<div>
+  <p>You sent us the following information:</p>
+</div>
 
 <div>
   <p>First Name: <%= @user.first_name.capitalize %></p>
@@ -17,6 +21,5 @@
 </div>
 
 <div>
-  <p style="font-weight: bold;"><%= @user.first_name %> <%= @user.last_name %> says this:</p>
   <%=raw @user.memo %>
 </div>
