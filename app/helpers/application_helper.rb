@@ -29,4 +29,14 @@ module ApplicationHelper
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+  # Amazon Web Services Link
+  def aws_link(type)
+    if type == "s3_https"
+      "https://s3-us-west-1.amazonaws.com/refresh-ministries.org"
+    elsif type == "s3_http"
+      "http://refresh-ministries.org.s3.amazonaws.com"
+    elsif type == "cloudfront"
+      "https://drqkr2smv75b.cloudfront.net"
+    end
+  end
 end
