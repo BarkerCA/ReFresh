@@ -22,7 +22,7 @@
     <script type="text/javascript">
       $(document).ready(function(){
         var body = $('body').height();
-        var bodyminus = body - 81;
+        var bodyminus = body - 80;
         $('#main').css({'min-height' : bodyminus});
         $('#healthy_banner').fadeIn(1500, function(){
           $("#mission").slideDown(1000);
@@ -30,6 +30,8 @@
       });
       $(document).foundation();
     </script>
+    <% unless mobile_device? %>
     <%= render "layouts/admin/parts/tinymce" %>
+    <% end %>
   </body>
 </html>

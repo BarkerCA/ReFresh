@@ -1,0 +1,58 @@
+//
+// Font Rems
+//
+
+
+//
+// Small screens
+//
+@media only screen {
+  body.about{
+    #main{
+      img{
+        @include photo_style;
+        margin: 0px 0px 10px 0px;
+      }
+      img:hover{
+        @include photo_style_hover($shadow-color: $rf-green);
+      }
+      #cal_bio_img{
+        width: 100%;
+      }
+      #ron_bio_img{
+        width: 100%;
+      }
+    }
+  }
+}
+//
+// Medium screens 
+//
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  body.about{
+    #main{
+
+    }
+  }
+}
+//
+// Large screens
+//
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  body.about{
+    #main{
+      img{
+        @include photo_style($border-width: 10px);
+        margin: 0px 0px 0px 0px;
+      }
+      #cal_bio_img{
+        
+      }
+      #ron_bio_img{
+        
+      }
+    }
+  }
+}

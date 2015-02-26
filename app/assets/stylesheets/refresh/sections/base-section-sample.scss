@@ -1,0 +1,37 @@
+//
+// Font Rems
+//
+
+
+//
+// Small screens
+//
+@media only screen {
+  body.[controller_name]{
+    #main{
+      
+    }
+  }
+}
+//
+// Medium screens 
+//
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  body.[controller_name]{
+    #main{
+
+    }
+  }
+}
+//
+// Large screens
+//
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  body.[controller_name]{
+    #main{
+
+    }
+  }
+}

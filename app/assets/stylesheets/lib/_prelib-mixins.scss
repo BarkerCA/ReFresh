@@ -1,4 +1,4 @@
-@mixin box-emboss($opacity, $opacity2){
+@mixin box-emboss($opacity: .5, $opacity2: .5){
     box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
 }
 
@@ -12,7 +12,7 @@
     @include text-shadow($shadow1, $shadow2);
 }
 
-@mixin emboss($opacity1, $opacity2){
+@mixin emboss($opacity1: .5, $opacity2: .5){
     $shadow1: -1px -1px 0 rgba(255,255,255, $opacity1);
     $shadow2: 1px 1px 0 rgba(0,0,0, $opacity2);
     @include text-shadow($shadow1, $shadow2);
@@ -23,4 +23,19 @@
   background: -o-linear-gradient($top, $bottom); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient($top, $bottom); /* For Firefox 3.6 to 15 */
   background: linear-gradient($top, $bottom); /* Standard syntax */
+}
+
+@mixin rotate_element($amount){
+  /* IE 9 */
+  -ms-transform: rotate($amount);
+  /* Chrome, Safari, Opera */
+  -webkit-transform: rotate($amount);
+  transform: rotate($amount);
+}
+
+@mixin full_background{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }

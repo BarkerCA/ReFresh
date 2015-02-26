@@ -1,13 +1,13 @@
 class AboutController < ApplicationController
   def refresh
-    @page = {:title => 'About ReFresh Ministries', :head_title => 'ReFresh Ministries'}
+    @page = {:title => 'The Heart Behind ReFresh Ministries', :head_title => 'Our Heart'}
   end
 
   def cal
-    @page = {:title => 'About Cal Woods', :head_title => 'Cal Woods'}
+    @page = {:title => "Cal Woods' Biography", :head_title => 'Cal Woods'}
   end
   
   def ron
-    @page = {:title => 'About Ron Sylvia', :head_title => 'Ron Sylvia'}
+    @page = {:title => "Ron Sylvia's Biography", :head_title => 'Ron Sylvia'}
   end
 end

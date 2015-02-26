@@ -6,7 +6,6 @@ body{
   @extend .full-background;
   background-position: 0px 0px;
   background-image: url('https://drqkr2smv75b.cloudfront.net/www/images/waves1.jpg');
-  //color: $white;
   
   h1,h2,h3,h4,h5,h6{
     color: $rf-green;
@@ -18,40 +17,21 @@ body{
     padding-bottom: 10px;
     background: $rf-gray;
   }
-  
-  //
-  // Main Content Area
-  //
-  #main{
-    background: rgba(255,255,255,0.85);
-    padding-top: 25px;
-    padding-bottom: 25px;
-    color: $rf-gray;
-    
-    #big_top_image{
-      margin-top: -50px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url('/assets/HalfMoonBay.jpg');
-      width: 100%;
-      height: 300px;
-    }
-  }
 
   //
-  // Front page styling only
+  // Front Page Styling
   //
   #container{
     
     #healthy_banner{
-      background-color: $rf-gray;
+      background-color: $rf-green;
       padding-top: 10px;
       padding-bottom: 10px;
       display: none;
     }
     
     #mission{
+      // Creates the windowish effect, don't delete
       display: none;
     }
     
