@@ -96,7 +96,7 @@ $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
 // We use these as default colors throughout
-$primary-color: #3AB54A;
+// $primary-color: #3AB54A;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -802,8 +802,8 @@ $primary-color: #3AB54A;
 
 // $include-html-off-canvas-classes: $include-html-classes;
 
-// $tabbar-bg: $oil;
-// $tabbar-height: rem-calc(45);
+$tabbar-bg: $sk-teal_dark;
+$tabbar-height: rem-calc(95);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
 // $tabbar-color: $white;
