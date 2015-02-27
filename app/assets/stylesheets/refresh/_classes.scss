@@ -113,3 +113,7 @@
 .home_images:hover{
   @include photo_style_hover($shadow-color: $rf-green);
 }
+
+.mce-btn button{
+  background-color: rgba($primary-color,0.1);
+}
