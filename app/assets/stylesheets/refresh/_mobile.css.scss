@@ -1,0 +1,101 @@
+//
+// Font Rems
+//
+$toph1-rem: 20;
+
+//
+// Small screens
+//
+@media only screen {
+  body{
+    #main{
+      background: rgba(255,255,255,0.85);
+      padding-bottom: 25px;
+      color: $rf-gray;
+      
+      h1.top_h1{
+        color: $white;
+        margin: 0px 0px 10px 0px;
+        background-color: $rf-green;
+        font-size: rem-calc($toph1-rem);
+        text-align: center;
+        @include emboss;
+      }
+      
+    }
+    
+    .home_images{
+      margin-bottom: 15px;
+    }
+    //
+    // Front Page Styling
+    //
+    #container{
+      #mission{
+        height: 0px;
+      }
+      #coaching{
+        img{
+          margin-top: 10px;
+        }
+      }
+      
+      #barnabas{
+        #barnabas_upper_image{
+          display: inline-block;
+        }
+        #barnabas_lower_image{
+          display: none;
+        }
+      }
+    }
+  }
+}
+//
+// Medium screens 
+//
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  
+}
+//
+// Large screens
+//
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  body{
+    #main{
+      h1.top_h1{
+        font-size: rem-calc($toph1-rem + 20);
+        margin: 0px 0px 25px 0px;
+      }
+    }
+    
+    //
+    // Front Page Styling
+    //
+    #container{
+      h1{
+        letter-spacing: rem-calc(5);
+        padding-bottom: 15px;
+        margin-bottom: 35px;
+      }
+      #mission{
+        height: 400px;
+      }
+      #coaching{
+        img{
+          margin-top: 100px;
+        }
+      }
+      #barnabas{
+        #barnabas_upper_image{
+          display: none;
+        }
+        #barnabas_lower_image{
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
