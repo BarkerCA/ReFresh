@@ -1,6 +1,6 @@
 module ApplicationHelper
   def head_page_title
-    title_separator = " :: "
+    title_separator = " - "
     begin
       if @page[:head_title].length > 0
         title = "#{title_separator}#{@page[:head_title]}"
