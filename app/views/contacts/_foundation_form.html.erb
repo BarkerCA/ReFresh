@@ -13,6 +13,14 @@
             </ul>
           </div>
         <% end %>
+        <% if @msg %>
+        <div class="error_messages">
+          <h3>Please correct the errors below.</h3>
+          <ul>
+            <li><%= @msg %></li>
+          </ul>
+        </div>
+        <% end %>
           <div class="row">
             <div class="large-6 columns">
               <div class="row collapse prefix-radius">

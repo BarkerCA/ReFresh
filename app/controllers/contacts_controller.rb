@@ -18,12 +18,16 @@ class ContactsController < ApplicationController
           format.html { redirect_to '/contact/finished/' + is_human?.to_s }
           format.json { render :show, status: :created, location: @contact }
         else
-          format.html { render :error }
+          format.html { render :new }
           format.json { render json: @contact.errors, status: :unprocessable_entity }
         end
       end
     else
-      redirect_to '/contact/finished/nosend'
+      @message = Message.new(message_params)
+      respond_to do |format|
+        @msg = "The answer to the challenge question is not #{params[:challenge]}"
+        format.html { render :new}
+      end
     end
   end
   
