@@ -4,4 +4,5 @@ class HomeController < ApplicationController
     @nuggets = Nugget.last(5).reverse
     @contact = Contact.new
   end
+
 end

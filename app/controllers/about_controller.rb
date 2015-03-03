@@ -10,4 +10,8 @@ class AboutController < ApplicationController
   def ron
     @page = {:title => "Ron Sylvia's Biography", :head_title => 'Ron Sylvia'}
   end
+  
+  def privacy
+    @page = {:title => 'Privacy Policy', :head_title => 'Privacy'}
+  end
 end

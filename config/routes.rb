@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   # Site Root
   root 'home#index'
   
+  # Home URLS
+  get 'privacy'                 => 'about#privacy'
+  
   # Admin URLS
   get "admin" => "admin/home#index"
   namespace :admin do
