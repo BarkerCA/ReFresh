@@ -32,6 +32,7 @@ class ContactsController < ApplicationController
   end
   
   def finished
+    @data = params[:data]
     if params[:data] == 'nosend'
       @page = {:title => 'Error Sending', :head_title => 'Error Sending'}
       @msg = '<p data-alert class="alert-box alert radius">We had a problem saving your information!<a href="#" class="close">&times;</a></p><p class="text-center"><a class="button" href="/contact">Please Try Again</a></p>'
