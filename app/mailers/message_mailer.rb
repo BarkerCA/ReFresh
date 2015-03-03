@@ -9,7 +9,7 @@ class MessageMailer < ApplicationMailer
     # :first_name, :last_name, :email, :telephone, :memo
     # 
     @user = contact
-    mail(to: 'cal@refresh-ministries.org', bcc: 'chris@refresh-ministries.org', subject: "New Message For ReFresh Ministries")
+    mail(to: 'chris@refresh-ministries.org', bcc: 'chris@refresh-ministries.org', subject: "New Message For ReFresh Ministries")
   end
   
   def thankyou_email(contact)
